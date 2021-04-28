@@ -3,6 +3,7 @@
 #include <string>
 #include <fstream>
 using namespace std;
+template <typename T>
 class Dradog
 {
 public:
@@ -12,10 +13,8 @@ public:
     ~Dradog();
     static void getRidOfStrLine(string);
     static void replaceStr(string,string);
-    int pow(int,int);//function overloading, 
-    long int pow(long int,int);//function overloading, 
-    float pow(float,int);//function overloading, 
-    double pow(double,int);//function overloading, 
+    T pow(T,int);
+    //如何声明模板函数？
 private:
     
 };

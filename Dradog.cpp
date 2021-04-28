@@ -4,16 +4,22 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
-Dradog::Dradog(){
+
+template <typename T>
+Dradog<T>::Dradog(){
     age = 1;
 }
-Dradog::Dradog(int age){
+
+template <typename T>
+Dradog<T>::Dradog(int age){
     this->age = age;
 }
-Dradog::~Dradog(){
+template <typename T>
+Dradog<T>::~Dradog(){
 
 }
-void Dradog::replaceStr(string oldStr, string newStr){
+template <typename T>
+void Dradog<T>::replaceStr(string oldStr, string newStr){
     //function replaceStr
     //Parameters string string 
     //no return value
@@ -65,7 +71,8 @@ void Dradog::replaceStr(string oldStr, string newStr){
     out.close();
     cout<<"Done"<<"\n";
 }
-void Dradog::getRidOfStrLine(string getstr) {
+template <typename T>
+void Dradog<T>::getRidOfStrLine(string getstr) {
     //function replaceStr
     //Parameters string string 
     //no return value
@@ -114,45 +121,14 @@ void Dradog::getRidOfStrLine(string getstr) {
     out.close();
     cout<<"Done"<<"\n";
 }
-int Dradog::pow(int x,int y){
+template<typename T>
+T Dradog<T>::pow(T x,int y){
     //function overloading -- pow
     //work: pow
-    int res = 1;
+    T res = 1;
     for(int f = 0;f < y; f++){
         res = res * x;
     }
     return res;
 }
-long int Dradog::pow(long int x,int y){
-    //function overloading -- pow
-    //parameter long int ,int
-    //return long int
-    //work: pow
-    long int res = 1;
-    for(int f = 0;f < y; f++){
-        res = res * x;
-    }
-    return res;
-}
-float Dradog::pow(float x,int y){
-    //function overloading -- pow
-    //parameter float ,int
-    //return float
-    //work: pow
-    float res = 1.0f;
-    for(int f = 0;f < y; f++){
-        res = res * x;
-    }
-    return res;
-}
-double Dradog::pow(double x,int y){
-    //function overloading -- pow
-    //parameter double ,int
-    //return double
-    //work: pow
-    double res = 1.0;
-    for(int f = 0;f < y; f++){
-        res = res * x;
-    }
-    return res;
-}
+
